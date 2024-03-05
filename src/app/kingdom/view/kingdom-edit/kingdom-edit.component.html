@@ -1,0 +1,39 @@
+<!-- customer-edit.component.html -->
+<div *ngIf="kingdomForm" >
+    <h2 >Kingdom edit</h2>
+    <form [formGroup]="kingdomForm" (ngSubmit)="updateKingdom()">
+        <div>
+            <div>
+                <label for="id">ID:</label>
+            </div>
+            <div >
+                <input type="text" id="id" formControlName="id" readonly />
+            </div>
+        </div>
+
+        <div >
+            <div >
+                <label for="name">name:</label>
+            </div>
+            <div>
+                <input type="text" id="name" formControlName="name" />
+            </div>
+        </div>
+
+
+        <div>
+            <div >
+                <label for="taxonomyYear">taxonomyYear:</label>
+            </div>
+            <div>
+                <input type="number" id="taxonomyYear" formControlName="taxonomyYear" />
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <button type="submit">Edit</button>
+            </div>
+        </div>
+    </form>
+</div>

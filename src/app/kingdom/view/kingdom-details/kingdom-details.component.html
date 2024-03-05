@@ -1,0 +1,29 @@
+<div *ngIf="kingdom">
+  <h2>Kingdom Detail</h2>
+
+  <div>
+    <div>kingdom ID:</div>
+    <div>{{ kingdom.id }}</div>
+  </div>
+
+  <div>
+    <div>kingdom Name:</div>
+    <div>{{ kingdom.name }}</div>
+  </div>
+
+  <div>
+    <div>kingdom taxonomyYear:</div>
+    <div>{{ kingdom.taxonomyYear }}</div>
+  </div>
+</div>
+
+<div>
+  <h2>Kingom's species</h2>
+    <tr *ngFor="let spec of species">
+      <td>{{ spec.name }}</td>
+      <td>{{ spec.classificationYear }}</td>
+      <td>
+        <button  (click)="deleteSpecies(spec.id)">Delete</button>
+      </td>
+    </tr>
+</div>

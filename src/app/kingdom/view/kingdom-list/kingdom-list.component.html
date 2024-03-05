@@ -1,0 +1,26 @@
+<div>
+  <h2>Kingdom List</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Taxonomy year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let kingdom of kingdoms">
+      <td>{{ kingdom.name }}</td>
+      <td>{{ kingdom.taxonomyYear }}</td>
+      <td>
+        <button (click)="deleteKingdom(kingdom.id)">Delete</button>
+        <button [routerLink]="['/kingdom', kingdom.id, 'edit']">Edit</button>
+        <button [routerLink]="['/kingdom', kingdom.id]">Details</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div>
+    <button routerLink="/kingdom/add">Add Kingdom</button>
+  </div>
+
+</div>
